@@ -1,0 +1,130 @@
+// GUNMAN SPEECH SYSTEM SENTENCES. DO NOT MODIFY THIS FILE! Max of 1023 sentences.
+
+// delete:
+// clear! (same as clear_out!)
+
+// ought to use:
+// double_check (double check this zone)
+// movement_this_zone
+// uhh_roger_that
+// whoa!
+
+
+//Firing Range
+
+RANGE1 gunmanchronicles/range/range1
+RANGE2 gunmanchronicles/range/range2
+RANGE3 gunmanchronicles/range/range3
+RANGE4 gunmanchronicles/range/range4
+RANGE5 gunmanchronicles/range/range5
+RANGE6 gunmanchronicles/range/range6
+RANGE7 gunmanchronicles/range/range7
+RANGE8 gunmanchronicles/range/range8
+RANGE9 gunmanchronicles/range/range9
+RANGE10 gunmanchronicles/range/range10
+RANGE11 gunmanchronicles/range/range11
+RANGE12 gunmanchronicles/range/range12
+RANGE13 gunmanchronicles/range/range13
+RANGE14 gunmanchronicles/range/range14
+RANGE15 gunmanchronicles/range/range15
+RANGE16 gunmanchronicles/range/range16
+RANGE17 gunmanchronicles/range/range17
+RANGE18 gunmanchronicles/range/range18
+RANGE19 gunmanchronicles/range/range19
+RANGE20 gunmanchronicles/range/range20
+RANGE21 gunmanchronicles/range/range21
+RANGE22 gunmanchronicles/range/range22
+RANGE23 gunmanchronicles/range/range23
+RANGE24 gunmanchronicles/range/range24
+RANGE25 gunmanchronicles/range/range25
+
+//Gunmen on the asteroid city firing ranges
+
+GUNMAN1 gunmanchronicles/gunman/gunman1
+GUNMAN2 gunmanchronicles/gunman/gunman2
+GUNMAN3 gunmanchronicles/gunman/gunman3
+GUNMAN4 gunmanchronicles/gunman/gunman4
+GUNMAN5 gunmanchronicles/gunman/gunman5
+GUNMAN6 gunmanchronicles/gunman/gunman6
+GUNMAN7 gunmanchronicles/gunman/gunman7
+GUNMAN8 gunmanchronicles/gunman/gunman8
+GUNMAN9 gunmanchronicles/gunman/gunman9
+GUNMAN10 gunmanchronicles/gunman/gunman10
+GUNMAN11 gunmanchronicles/gunman/gunman11
+GUNMAN12 gunmanchronicles/gunman/gunman12
+GUNMAN13 gunmanchronicles/gunman/gunman13
+GUNMAN14 gunmanchronicles/gunman/gunman14
+GUNMAN15 gunmanchronicles/gunman/gunman15
+GUNMAN16 gunmanchronicles/gunman/gunman16
+GUNMAN17 gunmanchronicles/gunman/gunman17
+
+//Gunmen on the tank range
+
+TANK1 gunmanchronicles/gunman/tank1
+TANK2 gunmanchronicles/gunman/tank2
+TANK3 gunmanchronicles/gunman/tank3
+TANK4 gunmanchronicles/gunman/tank4
+TANK5 gunmanchronicles/gunman/tank5
+TANK6 gunmanchronicles/gunman/tank6
+TANK7 gunmanchronicles/gunman/tank7
+TANK8 gunmanchronicles/gunman/tank8
+TANK9 gunmanchronicles/gunman/tank9
+
+//Gunman on explosives course
+
+EXPLOSIVES1 gunmanchronicles/gunman/explosives1
+EXPLOSIVES2 gunmanchronicles/gunman/explosives2
+EXPLOSIVES3 gunmanchronicles/gunman/explosives3
+ROCKET1 gunmanchronicles/gunman/rocket1
+ROCKET2 gunmanchronicles/gunman/rocket2
+ROCKET3 gunmanchronicles/gunman/rocket3
+ROCKET4 gunmanchronicles/gunman/rocket4
+ROCKET5 gunmanchronicles/gunman/rocket5
+ROCKET6 gunmanchronicles/gunman/rocket6
+ROCKET7 gunmanchronicles/gunman/rocket7
+ROCKET8 gunmanchronicles/gunman/rocket8
+ROCKET9 gunmanchronicles/gunman/rocket9
+ROCKET10 gunmanchronicles/gunman/rocket10
+
+
+//Gunmen on the asteroid city movement course
+
+//BRIEFING1 gunmanchronicles/gunman/briefing1
+BRIEFING1 gunmanchronicles/gunman/briefing2
+//BRIEFING3 gunmanchronicles/gunman/briefing3
+
+HEY gunmanchronicles/gunman/hey
+
+M1 gunmanchronicles/gunman/mission1
+M2 gunmanchronicles/gunman/mission2
+M3 gunmanchronicles/gunman/mission3
+M4 gunmanchronicles/gunman/mission4
+M5 gunmanchronicles/gunman/mission5
+
+MOVEMENT1 gunmanchronicles/gunman/movement1
+MOVEMENT2 gunmanchronicles/gunman/movement2
+PRAISE1 gunmanchronicles/gunman/praise1
+PRAISE2 gunmanchronicles/gunman/praise2
+
+//Armor guys
+ARMOR1 gunmanchronicles/gunman/armor1
+ARMOR2 gunmanchronicles/gunman/armor2
+ARMOR3 gunmanchronicles/gunman/armor3
+ARMOR4 gunmanchronicles/gunman/armor4
+ARMOR5 gunmanchronicles/gunman/armor5
+
+//Gunmen in statue-room "USE" replies
+STATUEUSE1 gunmanchronicles/gunman/statue_room_guys1
+STATUEUSE2 gunmanchronicles/gunman/statue_room_guys2
+STATUEUSE3 gunmanchronicles/gunman/statue_room_guys3
+STATUEUSE4 gunmanchronicles/gunman/statue_room_guys4
+
+//Gunmen generic urge-on "USE" replies
+URGEUSE1 gunmanchronicles/gunman/urge_on1
+URGEUSE2 gunmanchronicles/gunman/urge_on2
+URGEUSE3 gunmanchronicles/gunman/urge_on3
+URGEUSE4 gunmanchronicles/gunman/urge_on4
+
+//Gunman that is fixing something "USE" replies
+REPAIRUSE1 gunmanchronicles/gunman/repair_guy1
+REPAIRUSE2 gunmanchronicles/gunman/repair_guy2
