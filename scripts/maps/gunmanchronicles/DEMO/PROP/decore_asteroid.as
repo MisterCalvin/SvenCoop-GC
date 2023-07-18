@@ -42,8 +42,11 @@ class decore_asteroid : gunman_cycler
 	{
 		gunman_cycler::Spawn();
 		
-		uint findd = self.pev.model.opImplConv().Find( "Asteroid.mdl" );
-		if( findd > 7 && findd < self.pev.model.opImplConv().Length() )
+		//uint findd = self.pev.model.opImplConv().Find( "Asteroid.mdl" ); // KCM - Removed
+        uint findd = string( self.pev.model ).Find( "Asteroid.mdl" );
+        
+		//if( findd > 7 && findd < self.pev.model.opImplConv().Length() ) // KCM - Removed
+        if( findd > 7 && findd < string( self.pev.model ).Length() )
 		{
 			float flScale = 1.0f;
 			int   iBody   = 0;

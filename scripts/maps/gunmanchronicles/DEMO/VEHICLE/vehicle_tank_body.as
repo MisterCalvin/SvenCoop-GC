@@ -4,7 +4,8 @@ final class vehicle_tank_body : CGenericVehicle
 {
 	void Spawn()
 	{
-		InitBrush();
+		//InitBrush();
+		InitMdl();
 		CGenericVehicle::Spawn();
 		
 		self.pev.velocity = Vector(1337,1337,1337);

@@ -191,7 +191,7 @@ abstract class GC_BasePlayerWeapon : ScriptBasePlayerWeaponEntity
 	void Drop()
 	{
 		CloseCustomMenu();
-		BaseClass.Drop();
+		//BaseClass.Drop // What is this doing? KCM
 	}
 	
 	bool CanDeploy()
@@ -295,6 +295,30 @@ abstract class GC_BasePlayerWeapon : ScriptBasePlayerWeaponEntity
 		// more check, less crash :3
 		if( self.m_hPlayer.IsValid() )
 			m_pPlayer.pev.fov = m_pPlayer.m_iFOV = uiFOV;
+	}
+    
+    void ShellEject( CBasePlayer@ pPlayer, int& in mShell, Vector& in Pos, bool leftShell = false, bool downShell = false, TE_BOUNCE shelltype = TE_BOUNCE_SHELL ) 
+	{
+		Vector vecShellVelocity, vecShellOrigin;
+		GetDefaultShellInfo( pPlayer, vecShellVelocity, vecShellOrigin, Pos.x, Pos.y, Pos.z, leftShell, downShell ); //23 4.75 -5.15
+		vecShellVelocity.y *= 1;
+		g_EntityFuncs.EjectBrass( vecShellOrigin, vecShellVelocity, pPlayer.pev.angles.y, mShell, shelltype );
+	}
+    
+	void GetDefaultShellInfo( CBasePlayer@ pPlayer, Vector& out ShellVelocity, Vector& out ShellOrigin, float forwardScale, float rightScale, float upScale, bool leftShell, bool downShell )
+	{
+		Vector vecForward, vecRight, vecUp;
+
+		g_EngineFuncs.AngleVectors( pPlayer.pev.v_angle, vecForward, vecRight, vecUp );
+
+		const float fR = (leftShell == true) ? Math.RandomFloat( -120, -60 ) : Math.RandomFloat( 60, 120 );
+		const float fU = (downShell == true) ? Math.RandomFloat( -150, -90 ) : Math.RandomFloat( 90, 150 );
+
+		for( int i = 0; i < 3; ++i )
+		{
+			ShellVelocity[i] = pPlayer.pev.velocity[i] + vecRight[i] * fR + vecUp[i] * fU + vecForward[i] * Math.RandomFloat( 1, 50 );
+			ShellOrigin[i]   = pPlayer.pev.origin[i] + pPlayer.pev.view_ofs[i] + vecUp[i] * upScale + vecForward[i] * forwardScale + vecRight[i] * rightScale;
+		}
 	}
 	
 	void PlayWeaponSound( string soundFile, float flVolume = VOL_NORM, float flAttenuation = ATTN_NORM, int iFlags = 0, int iPitch = PITCH_NORM )

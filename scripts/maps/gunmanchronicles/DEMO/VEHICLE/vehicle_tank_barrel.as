@@ -4,7 +4,8 @@ final class vehicle_tank_barrel : CGenericVehicle
 {
 	void Spawn()
 	{
-		InitBrush();
+		//InitBrush();
+        InitMdl();
 		CGenericVehicle::Spawn();
 	}
 	

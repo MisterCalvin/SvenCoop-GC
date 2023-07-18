@@ -1,5 +1,3 @@
-
-
 class entity_digitgod : ScriptBaseEntity
 {
 	private EHandle[]	m_hSprites;
@@ -22,13 +20,11 @@ class entity_digitgod : ScriptBaseEntity
 	{
 		BaseClass.Precache();
 		
-		
 		g_Game.PrecacheModel( "models/gunmanchronicles/digits.mdl" );
 	}
 	
 	void Spawn()
 	{
-		
 		Precache();
 		
 		BaseClass.Spawn();
@@ -38,7 +34,6 @@ class entity_digitgod : ScriptBaseEntity
 		self.pev.takedamage		= DAMAGE_NO;
 		
 		CreateSprites();
-		
 	}
 	
 	void Use( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue = 0.0f )
@@ -86,10 +81,10 @@ class entity_digitgod : ScriptBaseEntity
 		} while (n > 0);
 		
 		//g_Game.AlertMessage(at_console, "m_hSprites length = %1.\n", m_hSprites.length() );
-		
-		if( m_hSprites[0].IsValid() ) m_hSprites[0].GetEntity().pev.skin = ( digits.length > 0 ? digits[0] : 0 );
-		if( m_hSprites[1].IsValid() ) m_hSprites[1].GetEntity().pev.skin = ( digits.length > 1 ? digits[1] : 0 );
-		if( m_hSprites[2].IsValid() ) m_hSprites[2].GetEntity().pev.skin = ( digits.length > 2 ? digits[2] : 0 );
+        
+     	if( m_hSprites[0].IsValid() ) m_hSprites[0].GetEntity().pev.skin = ( digits.length() > 0 ? digits[0] : 0 );
+		if( m_hSprites[1].IsValid() ) m_hSprites[1].GetEntity().pev.skin = ( digits.length() > 1 ? digits[1] : 0 );
+		if( m_hSprites[2].IsValid() ) m_hSprites[2].GetEntity().pev.skin = ( digits.length() > 2 ? digits[2] : 0 );
 	}
 	
 	void ResetCounter()

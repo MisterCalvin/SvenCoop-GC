@@ -49,8 +49,6 @@ class weapon_vehicledriving : GC_BasePlayerWeapon
 	}
 	void Drop()
 	{
-		//BaseClass.Drop();
-		
 		g_EntityFuncs.Remove( self );
 	}
 	

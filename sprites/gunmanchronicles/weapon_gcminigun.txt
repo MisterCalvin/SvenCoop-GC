@@ -1,0 +1,11 @@
+10
+crosshair		320 gunmanchronicles/crosshairs		67		1		47		31
+autoaim			320 gunmanchronicles/crosshairs		67		33 		47		31
+crosshair		640 gunmanchronicles/crosshairs		67		1		47		31
+autoaim			640 gunmanchronicles/crosshairs		67		33		47		31
+weapon			320 gunmanchronicles/640hud1		0		90		170		43
+weapon_s		320 gunmanchronicles/640hud4		0		90		170		43
+ammo			320 gunmanchronicles/640hud7		144		96		24		24
+weapon			640 gunmanchronicles/640hud1		0		90		170		43
+weapon_s		640 gunmanchronicles/640hud4		0		90		170		43
+ammo			640 gunmanchronicles/640hud7		144		96		24		24

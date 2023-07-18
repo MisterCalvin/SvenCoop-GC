@@ -1,0 +1,15 @@
+14
+crosshair		320 	gunmanchronicles/crosshairs	148		0		64		32
+autoaim			320 	gunmanchronicles/crosshairs	148		33		64		32
+zoom			320 	gunmanchronicles/crosshairs  	0		0		1		1
+dmllock			320	    gunmanchronicles/dmllock	0		0		32		32
+weapon			320 	gunmanchronicles/640hud2	0		180		170		43
+weapon_s		320 	gunmanchronicles/640hud5	0		180		170		43
+ammo			320 	gunmanchronicles/640hud7	120		72		24		24
+crosshair		640 	gunmanchronicles/crosshairs	148		0		64		32
+autoaim			640 	gunmanchronicles/crosshairs	148		33		64		32
+zoom			640 	gunmanchronicles/crosshairs  	0		0		1		1
+dmllock			640	    gunmanchronicles/dmllock	0		0		32		32
+weapon			640 	gunmanchronicles/640hud2	0		180		170		43
+weapon_s		640 	gunmanchronicles/640hud5	0		180		170		43
+ammo			640 	gunmanchronicles/640hud7	120		72		24		24

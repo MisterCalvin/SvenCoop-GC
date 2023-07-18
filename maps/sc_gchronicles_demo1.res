@@ -8,6 +8,8 @@ gfx/env/m_bas_lf.tga
 gfx/env/m_bas_rt.tga
 gfx/env/m_bas_up.tga
 gmdemo.wad
+models/gunmanchronicles/w_gauss.mdl
+models/gunmanchronicles/v_gausspistol.mdl
 models/gunmanchronicles/Radar.mdl
 models/gunmanchronicles/asteroid.mdl
 models/gunmanchronicles/batterybot.mdl

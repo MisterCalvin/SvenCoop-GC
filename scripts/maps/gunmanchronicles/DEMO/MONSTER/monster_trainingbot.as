@@ -102,7 +102,8 @@ class monster_trainingbot : ScriptBaseMonsterEntity
 	{
 		self.Precache();
 
-		if( self.pev.model.opImplConv().IsEmpty() )
+		//if( self.pev.model.opImplConv().IsEmpty() )
+        if( string( self.pev.model ).IsEmpty() )
 			self.pev.model = "models/gunmanchronicles/batterybot.mdl";
 		
 		g_EntityFuncs.SetModel(self, self.pev.model);
@@ -136,11 +137,13 @@ class monster_trainingbot : ScriptBaseMonsterEntity
 			self.pev.takedamage = DAMAGE_NO;
 		}
 		
-		if( self.pev.netname.opImplConv().IsEmpty() )
+		//if( self.pev.netname.opImplConv().IsEmpty() )
+        if( string( self.pev.netname ).IsEmpty() )
 			self.pev.netname = "Training Bot";
 		
-		if( self.m_FormattedName.opImplConv().IsEmpty() )
-			self.m_FormattedName	=	self.pev.netname;
+		//if( self.m_FormattedName.opImplConv().IsEmpty() )
+        if( string( self.m_FormattedName ).IsEmpty() )
+			self.m_FormattedName = self.pev.netname;
 		
 		if( self.pev.speed <= 0.0 )
 		{
@@ -174,7 +177,8 @@ class monster_trainingbot : ScriptBaseMonsterEntity
 		g_Game.PrecacheModel( "sprites/lgtning.spr" );
 		g_Game.PrecacheModel( "sprites/gunmanchronicles/ballspark.spr" );
 		
-		if( self.pev.model.opImplConv().IsEmpty() == false )
+		//if( self.pev.model.opImplConv().IsEmpty() == false )
+        if( string( self.pev.model ).IsEmpty() == false )
 			g_Game.PrecacheModel( self.pev.model );
 		
 		for( uint i = 0; i < szArrayIdleSound.length(); i++ )
@@ -219,7 +223,8 @@ class monster_trainingbot : ScriptBaseMonsterEntity
 	{
 		self.StudioFrameAdvance();
 		
-		if( m_hGoalEnt.GetEntity() is null && self.pev.target.opImplConv().IsEmpty() == false )// this monster has a target
+		//if( m_hGoalEnt.GetEntity() is null && self.pev.target.opImplConv().IsEmpty() == false )// this monster has a target
+        if( m_hGoalEnt.GetEntity() is null && string( self.pev.target ).IsEmpty() == false )// this monster has a target
 		{
 			m_hGoalEnt = EHandle( g_EntityFuncs.FindEntityByTargetname( null, self.pev.target ) );
 		}
@@ -309,7 +314,7 @@ class monster_trainingbot : ScriptBaseMonsterEntity
 		self.StudioFrameAdvance();
 		self.pev.nextthink	= g_Engine.time + 0.1;
 
-		if( m_hGoalEnt.GetEntity() is null && self.pev.target.opImplConv().IsEmpty() == false )// this monster has a target
+		if( m_hGoalEnt.GetEntity() is null && string( self.pev.target ).IsEmpty() == false )// this monster has a target
 		{
 			m_hGoalEnt = EHandle( g_EntityFuncs.FindEntityByTargetname( null, self.pev.target ) );
 			UpdateGoal();

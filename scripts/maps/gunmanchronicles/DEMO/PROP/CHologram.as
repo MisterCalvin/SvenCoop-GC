@@ -85,7 +85,8 @@ abstract class CHologram : ScriptBaseMonsterEntity
 		if( self.pev.oldorigin == g_vecZero )
 			self.pev.oldorigin = self.pev.origin;
 		
-		string szModel = self.pev.model.opImplConv();
+		//string szModel = self.pev.model.opImplConv(); // Removed; KCM
+        string szModel = string( self.pev.model );
 		
 		if( szModel.IsEmpty() )
 		{
@@ -146,11 +147,11 @@ abstract class CHologram : ScriptBaseMonsterEntity
 
 		self.MonsterInit();
 		
-		if( self.pev.netname.opImplConv().IsEmpty() )
-			self.pev.netname		=	"Shooting Target Hologram";
+        if ( string( self.pev.netname ).IsEmpty() )
+			self.pev.netname = "Shooting Target Hologram";
 		
-		if( self.m_FormattedName.opImplConv().IsEmpty() )
-			self.m_FormattedName	=	self.pev.netname;
+        if ( string( self.m_FormattedName ).IsEmpty() )
+			self.m_FormattedName = self.pev.netname;
 		
 		if( self.pev.renderfx == 0 )
 			self.pev.renderfx = 255;

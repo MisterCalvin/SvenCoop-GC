@@ -4,6 +4,9 @@
 models/gunmanchronicles/p_crowbar.mdl
 models/gunmanchronicles/v_gcknife.mdl
 models/gunmanchronicles/w_knife.mdl
+models/gunmanchronicles/v_beam.mdl
+models/gunmanchronicles/v_guasspistol.mdl
+models/player/gunman/gunman.mdl
 gfx/env/m_bas_bk.tga
 gfx/env/m_bas_dn.tga
 gfx/env/m_bas_ft.tga
@@ -22,6 +25,7 @@ models/gunmanchronicles/rockspin.mdl
 models/gunmanchronicles/screen.mdl
 models/gunmanchronicles/w_gauss.mdl
 models/gunmanchronicles/w_shotgun.mdl
+models/gunmanchronicles/tank.mdl
 sound/buttons/spark5.wav
 sound/buttons/spark6.wav
 sound/gunmanchronicles/ambience/access_granted.wav

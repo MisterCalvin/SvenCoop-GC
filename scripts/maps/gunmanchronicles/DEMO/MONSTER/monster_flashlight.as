@@ -4,6 +4,7 @@
 const int	SF_FLASHLIGHT_POINT			=		32;
 
 #include "monster_human_unarmed"
+
 class monster_flashlight : monster_human_unarmed
 {
 	void Spawn()

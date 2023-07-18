@@ -128,3 +128,14 @@ URGEUSE4 gunmanchronicles/gunman/urge_on4
 //Gunman that is fixing something "USE" replies
 REPAIRUSE1 gunmanchronicles/gunman/repair_guy1
 REPAIRUSE2 gunmanchronicles/gunman/repair_guy2
+
+HG_Talk34 gunmanchronicles/bandit/cin1_bandit2
+HG_Talk35 gunmanchronicles/bandit/cin1_bandit4
+
+BEARD8_GS gunmanchronicles/gscientist/beard8_gs
+BEARD9_GS gunmanchronicles/gscientist/beard9_gs
+
+//GUNMAN GENERAL
+GENERAL1 gunmanchronicles/general/general1_gs
+GENERAL3 gunmanchronicles/general/general3_gs
+GENERAL4 gunmanchronicles/general/general4_gs

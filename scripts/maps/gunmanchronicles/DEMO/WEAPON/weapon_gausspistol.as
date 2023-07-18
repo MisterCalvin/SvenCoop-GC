@@ -128,7 +128,7 @@ class weapon_gausspistol : GC_BasePlayerWeapon, LaserEffect, WallHitEffect
 		info.iMaxClip	= WEAPON_NOCLIP;
 		info.iSlot		= 1;
 		info.iPosition	= 4;
-		info.iId		= g_ItemRegistry.GetIdForName( self.pev.classname ); //self.m_iId;
+		info.iId		= g_ItemRegistry.GetIdForName( self.pev.classname );
 		info.iFlags		= ITEM_FLAG_SELECTONEMPTY | ITEM_FLAG_NOAUTOSWITCHEMPTY;
 		info.iWeight	= GLOCK_WEIGHT;
 		
@@ -187,7 +187,7 @@ class weapon_gausspistol : GC_BasePlayerWeapon, LaserEffect, WallHitEffect
 		return DefaultDeploy( GAUSSPISTOL_DRAW, "onehanded" , 0 , self.pev.body );
 	}
 	
-	void Holster( int skipLocal /*= 0*/ )
+	void Holster( int skipLocal )
 	{
 		m_bSwitchToSniper = false;
 		
@@ -283,7 +283,7 @@ class weapon_gausspistol : GC_BasePlayerWeapon, LaserEffect, WallHitEffect
 				break;
 		}
 	}
-	
+    
 	void FirePulseMode()
 	{
 		int currentClip = GetAmmoAmount( AMMO_TYPE_PRIMARYAMMO );

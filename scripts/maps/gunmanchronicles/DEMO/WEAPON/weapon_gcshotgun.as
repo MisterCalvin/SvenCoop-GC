@@ -84,10 +84,10 @@ class weapon_gcshotgun : GC_BasePlayerWeapon
 		info.iMaxAmmo2	= -1;
 		info.iMaxClip	= WEAPON_NOCLIP;
 		info.iSlot		= 2;
-		info.iPosition	= 4;
+		info.iPosition	= 5;
 		info.iId		= g_ItemRegistry.GetIdForName( self.pev.classname ); //self.m_iId;
 		info.iFlags		= ITEM_FLAG_SELECTONEMPTY | ITEM_FLAG_NOAUTOSWITCHEMPTY;
-		info.iWeight	= SHOTGUN_WEIGHT;
+		info.iWeight	= 15;
 		
 		return true;
 	}
@@ -123,7 +123,6 @@ class weapon_gcshotgun : GC_BasePlayerWeapon
 	void Holster( int skipLocal /*= 0*/ )
 	{
 		//self.SendWeaponAnim( GCSHOTGUN_HOLSTER, skipLocal, self.pev.body );
-		
 		GC_BasePlayerWeapon::Holster( skipLocal );
 	}
 	

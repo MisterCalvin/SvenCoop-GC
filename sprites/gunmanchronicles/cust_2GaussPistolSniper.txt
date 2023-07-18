@@ -1,13 +1,13 @@
 12
-weapon          320 320hudof01 80   120   80  20
-weapon_s        320 320hudof01 80   140  80  20
-ammo			320 gunmanchronicles/640hud7	0	96	24	24
-weapon          640 640hudof03 0   135  170 45
-weapon_s        640 640hudof04 0   135  170 45
-ammo			640 gunmanchronicles/640hud7	0	96	24	24
-crosshair		320 gunmanchronicles/crosshairs	1	1	31	31
-autoaim			320 gunmanchronicles/crosshairs  0	33	32	32
-zoom            320 ofch2  0  0   256  256
-crosshair		640 gunmanchronicles/crosshairs	1	1	31	31
-autoaim			640 gunmanchronicles/crosshairs  0	33	32	32	
-zoom            640 ofch2  0  0   256  256
+weapon          320     320hudof01 80   120   80  20
+weapon_s        320     320hudof01 80   140  80  20
+ammo			320     gunmanchronicles/640hud7	0	96	24	24
+weapon          640     640hudof03 0   135  170 45
+weapon_s        640     640hudof04 0   135  170 45
+ammo			640     gunmanchronicles/640hud7	0	96	24	24
+crosshair		320     gunmanchronicles/crosshairs	1	1	31	31
+autoaim			320     gunmanchronicles/crosshairs  0	33	32	32
+zoom            320     ofch2  0  0   256  256
+crosshair		640     gunmanchronicles/crosshairs	1	1	31	31
+autoaim			640     gunmanchronicles/crosshairs  0	33	32	32	
+zoom            640     ofch2  0  0   256  256

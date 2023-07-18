@@ -22,6 +22,7 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 	string	m_szUseSentences;
 	string	m_szUnuseSentences;
 	int[]	m_iBodygroup(2);
+	int     m_animate;
 	
 	bool KeyValue( const string& in szKey, const string& in szValue )
 	{
@@ -85,7 +86,7 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 
 		self.pev.yaw_speed = ys;
 	}
-	
+    
 	//=========================================================
 	// Spawn
 	//=========================================================
@@ -93,8 +94,8 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 	{
 		self.Precache();
 
-		if( self.pev.model.opImplConv().IsEmpty() )
-			self.pev.model = "models/gunmanchronicles/gunmantrooper_ng.mdl";
+        if( string( self.pev.model ).IsEmpty() )
+		self.pev.model = "models/gunmanchronicles/gunmantrooper_ng.mdl";
 		
 		g_EntityFuncs.SetModel(self, self.pev.model);
 		
@@ -119,12 +120,22 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 			self.pev.solid 		= SOLID_NOT;
 			self.pev.takedamage = DAMAGE_NO;
 		}
-		
-		if( self.pev.netname.opImplConv().IsEmpty() )
+        
+        if( string( self.pev.netname ).IsEmpty() )
 			self.pev.netname = "Unarmed Gunman";
 		
-		if( self.m_FormattedName.opImplConv().IsEmpty() )
+        if( string( self.m_FormattedName ).IsEmpty() )
 			self.m_FormattedName	=	self.pev.netname;
+
+		if( self.pev.sequence != 0 || self.pev.frame != 0 )
+		{
+			m_animate = 0;
+			self.pev.framerate = 0;
+		}
+		else
+		{
+			m_animate = 1;
+		}
 		
 		//SetUse( UseFunction( this.Use ) );
 	}
@@ -137,8 +148,8 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 		BaseClass.Precache();
 		
 		g_Game.PrecacheModel( "models/gunmanchronicles/gunmantrooper_ng.mdl" );
-		
-		if( self.pev.model.opImplConv().IsEmpty() == false )
+
+        if( string( self.pev.model ).IsEmpty() == false )
 			g_Game.PrecacheModel( self.pev.model );
 	}
 
@@ -212,7 +223,39 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 		
 		return BaseClass.GetSchedule();
 	}
+    
+    //=========================================================
+	// AI Schedules Specific to this monster
+	//=========================================================
 	
+	/*	void Think()
+	{
+		self.pev.nextthink = g_Engine.time + 0.1;
+
+		if( m_animate > 0 )
+		{
+			self.StudioFrameAdvance();
+		}
+		if( self.m_fSequenceFinished && !self.m_fSequenceLoops )
+		{
+			// ResetSequenceInfo();
+			// hack to avoid reloading model every frame
+			self.pev.animtime = g_Engine.time;
+			self.pev.framerate = 1.0;
+			self.m_fSequenceFinished = false;
+			self.m_flLastEventCheck = g_Engine.time;
+			self.pev.frame = 0;
+			if( m_animate <= 0 )
+				self.pev.framerate = 0.0;	// FIX: don't reset framerate
+		}
+	}*/
+	
+    /*void IdleThink()
+	{
+		self.StudioFrameAdvance();
+		self.pev.nextthink	= g_Engine.time + 0.1;
+	}*/
+    
 	void IdleSound()
 	{
 		self.PlaySentence( m_szStareSentences, Math.RandomFloat(5.0, 7.5), VOL_NORM, ATTN_IDLE );
@@ -239,6 +282,18 @@ class monster_human_unarmed : ScriptBaseMonsterEntity
 			self.PlaySentence( m_szUseSentences, 10.0, VOL_NORM, ATTN_IDLE );
 		}
 	}
+    
+    /*void HandleAnimEvent( MonsterEvent@ pEvent )
+    {                    
+        switch ( pEvent.event ) 
+        {
+        	case 1:
+            	break;
+            default:
+                BaseClass.HandleAnimEvent( pEvent );
+                break; 
+        }
+    }*/
 };
 
 void RegisterEntity_MonsterHumanUnarmed()

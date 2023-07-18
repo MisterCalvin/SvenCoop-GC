@@ -71,7 +71,7 @@ abstract class CGenericVehicle : ScriptBaseMonsterEntity
 		
 		if( setBox )
 		{
-			self.SetSequenceBox();
+			//self.SetSequenceBox(); // Set Bounding Box, may be bugged; KCM
 		}
 		
 		self.pev.solid			= solid;
@@ -361,7 +361,8 @@ abstract class CGenericVehicle : ScriptBaseMonsterEntity
 		{
 			//g_Game.AlertMessage(at_error, "SteerEntity SteerEntity SteerEntity\n");
 			
-			SteerEntity.Drop();
+			SteerEntity.DropItem(); // Changed from to DropItem; KCM
+			//m_hSteer.DropItem();
 			pPlayer.SetItemPickupTimes( g_Engine.time );
 			m_hSteer = null;
 		}
@@ -439,10 +440,10 @@ abstract class CGenericVehicle : ScriptBaseMonsterEntity
 		
 		self.m_afCapability		= bits_CAP_DOORS_GROUP;
 		
-		if( self.pev.netname.opImplConv().IsEmpty() )
+		if( string( self.pev.netname ).IsEmpty() )
 			self.pev.netname	= "Drivable Vehicle";
 		
-		if( self.m_FormattedName.opImplConv().IsEmpty() )
+		if( string( self.m_FormattedName ).IsEmpty() )
 			self.m_FormattedName	=	self.pev.netname;
 
 		self.pev.rendermode = 0;

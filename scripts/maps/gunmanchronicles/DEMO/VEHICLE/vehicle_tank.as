@@ -58,16 +58,16 @@ final class vehicle_tank : CGenericVehicle
 	
 	void Precache()
 	{
-		this.SoundEnter	=	"gunmanchronicles/Tank/startup.wav";
-		this.SoundIdle	=	"gunmanchronicles/Tank/engineidle.wav";
-		this.SoundExit	=	"gunmanchronicles/Tank/powerdown.wav";
+		this.SoundEnter	=	"gunmanchronicles/tank/startup.wav";
+		this.SoundIdle	=	"gunmanchronicles/tank/engineidle.wav";
+		this.SoundExit	=	"gunmanchronicles/tank/powerdown.wav";
 		
 		CGenericVehicle::Precache();
 		
 		g_Game.PrecacheModel( "models/mortarshell.mdl" );
-		g_Game.PrecacheModel( "models/gunmanchronicles/tank_bboxcollision.mdl" );
+		g_Game.PrecacheModel( "models/gunmanchronicles/tank.mdl" );
 		
-		PrecacheGenericSound( "gunmanchronicles/Tank/tankx1.wav" );
+		PrecacheGenericSound( "gunmanchronicles/tank/tankx1.wav" );
 		PrecacheGenericSound( "gunmanchronicles/weapons/hks1.wav" );
 	}
 	
@@ -78,10 +78,11 @@ final class vehicle_tank : CGenericVehicle
 		
 		CGenericVehicle::Spawn();
 		
-		self.pev.model = "models/gunmanchronicles/tank_bboxcollision.mdl";
+		self.pev.model = "models/gunmanchronicles/tank.mdl";
 		g_EntityFuncs.SetModel(self, self.pev.model );
 		
 		InitMdl();
+		//InitBrush();
 		
 		VehicleGroupingInit();
 	}
@@ -92,7 +93,8 @@ final class vehicle_tank : CGenericVehicle
 		m_hTurret  = EHandle( GetVehicleChild( "vehicle_tank_turret" ) );
 		m_hBarrel  = EHandle( GetVehicleChild( "vehicle_tank_barrel" ) );
 		
-		@CockpitEdict = m_hTurret.GetEntity().edict();
+		// This section is causing crashes, NULL Pointer Access. Check m_hTurret entity as it is responsible for camera; KCM
+		/*@CockpitEdict = m_hTurret.GetEntity().edict(); 
 		
 		@m_hBody.GetEntity().pev.euser4		= @CockpitEdict;
 		@m_hTurret.GetEntity().pev.euser4	= @CockpitEdict;
@@ -100,7 +102,7 @@ final class vehicle_tank : CGenericVehicle
 		
 		m_vecChildOffset[0] = m_hBody.GetEntity().pev.origin - self.pev.origin;
 		m_vecChildOffset[1] = m_hTurret.GetEntity().pev.origin - self.pev.origin;
-		m_vecChildOffset[2] = m_hBarrel.GetEntity().pev.origin - self.pev.origin;
+		m_vecChildOffset[2] = m_hBarrel.GetEntity().pev.origin - self.pev.origin;*/
 	}
 	
 	void Use( CBaseEntity@ pActivator, CBaseEntity@ pCaller, USE_TYPE useType, float flValue = 0.0f )
@@ -131,19 +133,19 @@ final class vehicle_tank : CGenericVehicle
 		
 		if( m_hBody.IsValid() )
 		{
-			//m_hBody.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[0];
+			m_hBody.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[0];
 			
-			//m_hBody.GetEntity().pev.velocity = self.pev.velocity;
+			m_hBody.GetEntity().pev.velocity = self.pev.velocity;
 		}
 		
 		if( m_hTurret.IsValid() )
 		{
-			//m_hTurret.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[1];
+			m_hTurret.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[1];
 		}
 		
 		if( m_hBarrel.IsValid() )
 		{
-			//m_hBarrel.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[2];
+			m_hBarrel.GetEntity().pev.origin = self.pev.origin + m_vecChildOffset[2];
 		}
 		
 		SUB_ParentThink();
@@ -307,4 +309,3 @@ void RegisterEntity_VehicleTank()
 	RegisterEntity_VehicleTankTurret();
 	RegisterEntity_VehicleTankBarrel();
 }
-

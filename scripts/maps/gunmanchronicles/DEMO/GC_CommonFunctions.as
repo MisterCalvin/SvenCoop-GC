@@ -183,7 +183,7 @@ bool is_user_stuck( entvars_t@ pevUser, const Vector &in origin )
   origins[11].y = origin.y - maxs.y;
   origins[11].z = origin.z - maxs.z;
   
-  for( uint i = 0; i < origins.length; i++ )
+  for( uint i = 0; i < origins.size(); i++ )
   {
     if( g_EngineFuncs.PointContents( origins[i] ) == CONTENTS_SOLID )
     {
@@ -206,5 +206,4 @@ Vector AnglesMod( Vector &in vecAngles )
 /*CSoundEnt@ SoundEnt()
 {
 	return cast<CSoundEnt@>( g_hSoundEnt.GetEntity() );
-}
-*/
+}*/

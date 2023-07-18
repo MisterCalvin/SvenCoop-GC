@@ -1,0 +1,41 @@
+Well, SoulSounds plugged them in to the game format and they're great! 
+We're all very happy with them and they really help the storyline.  SS
+just freaks about how good yer voice is for our bandits.  WOW.  How'd we
+meet up?  Must have been a bunch of planets aligned or something hehe
+:o)  Here's whats next:
+
+trapper7_1.wav> "Retreat to the landing platform!  Thats an order!"
+
+trapper7_2.wav> "Look!  I think he's got a mainframe core... but it cant be ours."
+
+trapper7_3.wav> "Hey!  Get away from that tank!"
+
+trapper7_4.wav> "Something has taken over the base computer.  We have reports of xenomes
+on the loose."
+
+trapper7_5.wav> "We can handle it."
+
+trapper7_6.wav> (SS will add radio sound to this) "Base to lookout post one.  Check-in,
+over." 
+
+traper7_7.wav> Lookoutpost, you are late on your check-in.  Respond, over."
+
+trapper7_8.wav> (SS will add radio sound to this) "Base to lookout post two.  Lookout
+post one has failed to check-in.  Be on alert."
+
+trapper7_9.wav> "Base reports that we've trapped enough specimines.  The General is
+departing with the first shipment soon."
+
+trapper7_10.wav>"Did you hear what happened to Trapper6?  I hear he got chewed up by one
+of these things!"
+
+trapper7_11.wav>"He should have packed more firepower--hah hah hahhhh"
+
+trapper7_12.wav>"Dont move"
+
+trapper7_13.wav>"Sir, my men have taken heavy casualties.  The intruder is well armed
+but there's no way he can blast his way into the underground base."
+
+trapper7_14.wav>"Yes SIR!"
+
+
